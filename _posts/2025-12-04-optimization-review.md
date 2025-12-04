@@ -109,6 +109,7 @@ $$f(\lambda x^{(1)} + (1-\lambda)x^{(2)}) \le \lambda f(x^{(1)}) + (1-\lambda)f(
 
 ### 3.2 凸规划
 **模型**：求凸函数在凸集上的极小点。
+
 $$\begin{aligned} \min \quad & f(x) \\ \text{s.t.} \quad & g_i(x) \ge 0, \quad i=1,\dots,m \\ & h_j(x) = 0, \quad j=1,\dots,l \end{aligned}$$
 
 其中 $f(x)$ 为凸函数，$g_i(x)$ 为凹函数（保证可行域是凸集），$h_j(x)$ 为线性函数（仿射函数）。
@@ -136,6 +137,7 @@ $$\begin{aligned} \min \quad & f(x) \\ \text{s.t.} \quad & g_i(x) \ge 0, \quad i
 (1) 该集合是两个半平面的交集。设 $S_1 = \{x \mid a_1^T x \ge b_1\}, S_2 = \{x \mid a_2^T x \ge b_2\}$。半平面（半空间）是凸集，凸集的交集仍为凸集，故 $S$ 是凸集。
 
 (2) 利用定义证明。设 $y = (y_1, y_2) \in S, z = (z_1, z_2) \in S$，即 $y_2 \ge |y_1|, z_2 \ge |z_1|$。对于 $\lambda \in [0, 1]$，令 $w = \lambda y + (1 - \lambda)z$。
+
 $$
 \begin{aligned}
 w_2 &= \lambda y_2 + (1 - \lambda)z_2 \\
@@ -144,6 +146,7 @@ w_2 &= \lambda y_2 + (1 - \lambda)z_2 \\
 &= |w_1|
 \end{aligned}
 $$
+
 故 $w \in S$，集合为凸集。
 
 (3) 该集合是圆盘。利用 Hesse 矩阵。定义 $g(x) = x_1^2 + x_2^2 - 10$。$\nabla^2 g(x) = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}$ 正定，故 $g(x)$ 是凸函数。凸函数的水平集 $S = \{x \mid g(x) \le 0\}$ 是凸集。
