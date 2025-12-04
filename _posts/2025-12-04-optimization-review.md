@@ -128,7 +128,7 @@ $$\begin{aligned} \min \quad & f(x) \\ \text{s.t.} \quad & g_i(x) \ge 0, \quad i
 
 **题目**：用定义验证下列各集合是凸集：
 1. $S = \{(x_1, x_2) \mid x_1 + 2x_2 \ge 1, x_1 - x_2 \ge 1\}$
-2. $S = \{(x_1, x_2) \mid x_2 \ge |x_1|\}$
+2. $S = \{(x_1, x_2) \mid x_2 \ge \lvert x_1 \rvert \}$
 3. $S = \{(x_1, x_2) \mid x_1^2 + x_2^2 \le 10\}$
 
 **解**：
@@ -178,8 +178,11 @@ $S$ 是凸集 $C$ 经过线性变换 $A$ 得到的像，由习题 2 的结论可
 
 1. 当 $k=2$ 时，由凸集定义显然成立。
 
-2. 假设 $k=m$ 时成立。考虑 $k=m+1$ 的情况：令 $x = \sum_{i=1}^{m+1} \lambda_i x^{(i)}$。若 $\lambda_{m+1} = 1$，显然 $x = x^{(m+1)} \in S$。若 $\lambda_{m+1} < 1$，令 $\mu = \sum_{i=1}^m \lambda_i = 1 - \lambda_{m+1} > 0$。
+2. 假设 $k=m$ 时成立。考虑 $k=m+1$ 的情况：令 $x = \sum_{i=1}^{m+1} \lambda_i x^{(i)}$。若 $\lambda_{m+1} = 1$，显然 $x = x^{(m+1)} \in S$。
+   若 $\lambda_{m+1} < 1$，令 $\mu = \sum_{i=1}^m \lambda_i = 1 - \lambda_{m+1} > 0$。
+   
    $$x = \mu \sum_{i=1}^m \frac{\lambda_i}{\mu} x^{(i)} + \lambda_{m+1} x^{(m+1)}$$
+   
    令 $y = \sum_{i=1}^m \frac{\lambda_i}{\mu} x^{(i)}$，由于 $\sum \frac{\lambda_i}{\mu} = 1$，根据归纳假设 $y \in S$。则 $x = \mu y + (1-\mu)x^{(m+1)}$，这是 $y$ 和 $x^{(m+1)}$ 的凸组合，故 $x \in S$。
 
 ### 习题 5：凸函数的判定
