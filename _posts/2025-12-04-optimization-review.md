@@ -50,7 +50,22 @@ $\bar{x}$ 称为 $y$ 在 $S$ 上的投影。
 **定理 2.1 (凸集分离定理)**：设 $S_1, S_2$ 是非空凸集且 $S_1 \cap S_2 = \emptyset$，则存在非零向量 $p$，使得：
 $$\inf \{ p^T x \mid x \in S_1 \} \ge \sup \{ p^T x \mid x \in S_2 \}$$
 即存在超平面分离这两个集合。
-
+> **证明思路**
+>
+> 1. **寻找最近点**：由于 $S$ 是闭凸集且 $y \notin S$，由投影定理（定理 1.4.2）可知，存在 $S$ 中唯一的点 $\bar{x}$ 使得 $\|y - \bar{x}\| = \inf_{x\in S} \|y - x\| > 0$。
+>
+> 2. **利用凸性证明变分不等式**：由于 $\bar{x}$ 是 $y$ 在 $S$ 上的投影，即 $\bar{x}$ 是 $S$ 中距离 $y$ 最近的点。对于任意 $x \in S$，构造线段上的点 $z(\lambda) = (1 - \lambda)\bar{x} + \lambda x$ ($\lambda \in [0, 1]$)。距离平方函数 $\phi(\lambda) = \|y - z(\lambda)\|^2$ 在 $\lambda = 0$ 处取最小值，故导数非负：
+>    $$\frac{d}{d\lambda}\|y - (\bar{x} + \lambda(x - \bar{x}))\|^2 \Big|_{\lambda=0} \ge 0$$
+>    展开求导可得：
+>    $$-2(y - \bar{x})^T(x - \bar{x}) \ge 0 \implies (y - \bar{x})^T(x - \bar{x}) \le 0$$
+>    整理符号即得：$(y - \bar{x})^T(\bar{x} - x) \ge 0$。
+>
+> 3. **得出分离结论**：令 $p = y - \bar{x}$。由上一步可知 $p^T \bar{x} \ge p^T x$。因为 $y = \bar{x} + p$，所以：
+>    $$p^T y = p^T(\bar{x} + p) = p^T \bar{x} + \|p\|^2$$
+>    代入不等式中：
+>    $$p^T y - \|p\|^2 \ge p^T x \implies p^T y \ge \|p\|^2 + p^T x$$
+>    令 $\epsilon = \|p\|^2 = \|y - \bar{x}\|^2 > 0$，即证 $p^T y \ge \epsilon + p^T x$。
+>    
 **定理 2.2 (点与闭凸集分离定理)**：设 $S$ 是闭凸集，$y \notin S$。则存在非零向量 $p$ 及 $\epsilon > 0$，使得对任意 $x \in S$：
 $$p^T y \ge \epsilon + p^T x$$
 这意味着存在一个超平面**严格分离**点 $y$ 和集合 $S$。
