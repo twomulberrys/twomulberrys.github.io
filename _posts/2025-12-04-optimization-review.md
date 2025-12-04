@@ -136,14 +136,14 @@ $$\begin{aligned} \min \quad & f(x) \\ \text{s.t.} \quad & g_i(x) \ge 0, \quad i
 
 (1) 该集合是两个半平面的交集。设 $S_1 = \{x \mid a_1^T x \ge b_1\}, S_2 = \{x \mid a_2^T x \ge b_2\}$。半平面（半空间）是凸集，凸集的交集仍为凸集，故 $S$ 是凸集。
 
-(2) 利用定义证明。设 $y = (y_1, y_2) \in S, z = (z_1, z_2) \in S$，即 $y_2 \ge |y_1|, z_2 \ge |z_1|$。对于 $\lambda \in [0, 1]$，令 $w = \lambda y + (1 - \lambda)z$。
+(2) 利用定义证明。设 $y = (y_1, y_2) \in S, z = (z_1, z_2) \in S$，即 $y_2 \ge \lvert y_1 \rvert, z_2 \ge \lvert z_1 \rvert$。对于 $\lambda \in [0, 1]$，令 $w = \lambda y + (1 - \lambda)z$。
 
 $$
 \begin{aligned}
 w_2 &= \lambda y_2 + (1 - \lambda)z_2 \\
-&\ge \lambda |y_1| + (1 - \lambda)|z_1| \\
-&\ge |\lambda y_1 + (1 - \lambda)z_1| \quad (\text{三角不等式}) \\
-&= |w_1|
+&\ge \lambda \lvert y_1 \rvert + (1 - \lambda)\lvert z_1 \rvert \\
+&\ge \lvert \lambda y_1 + (1 - \lambda)z_1 \rvert \quad (\text{三角不等式}) \\
+&= \lvert w_1 \rvert
 \end{aligned}
 $$
 
