@@ -1,6 +1,6 @@
 ---
 title: 2. 特征降维 (Feature Dimensionality Reduction)
-date: 2025-12-08 20:00:00 +0800
+date: 2025-12-08 19:00:00 +0800
 categories: [学习笔记, 机器学习]
 tags: [AI, 特征工程, PCA, 降维, 数学基础]
 math: true
