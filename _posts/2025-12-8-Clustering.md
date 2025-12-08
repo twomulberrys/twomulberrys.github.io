@@ -1,6 +1,6 @@
 ---
 title: 3. 聚类 (Clustering)
-date: 2025-12-08 21:00:00 +0800
+date: 2025-12-08 20:00:00 +0800
 categories: [学习笔记, 机器学习]
 tags: [AI, 无监督学习, 聚类, 评价指标, 距离度量]
 math: true
