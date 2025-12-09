@@ -112,7 +112,50 @@ $$y = f(x; \theta)$$
     * 通过海量数据的 **Next Token Prediction** 训练，涌现出了推理、代码生成等能力。
 
 ---
-
+mindmap
+  root((机器学习<br/>模型全景))
+    [:fa-book: 监督学习<br/>(古典方法)]
+      (回归任务<br/>Regression)
+        **线性回归**
+        多项式回归
+        Ridge/Lasso回归
+      (分类任务<br/>Classification)
+        逻辑回归
+        支持向量机(SVM)
+        k近邻(k-NN)
+        朴素贝叶斯
+      (集成学习<br/>Ensemble)
+        决策树(基分类器)
+        随机森林(Bagging)
+        XGBoost/LightGBM(Boosting)
+    [:fa-connectdevelop: 无监督学习<br/>(数据挖掘)]
+      (聚类<br/>Clustering)
+        K-Means
+        高斯混合模型(GMM)
+        DBSCAN(密度聚类)
+      (降维<br/>Dim Reduction)
+        PCA(主成分分析)
+        LDA(线性判别)
+        t-SNE(可视化)
+    [:fa-brain: 深度学习<br/>(神经网络)]
+      (基础架构)
+        MLP(多层感知机)
+      (计算机视觉<br/>CV)
+        CNN(卷积神经网络)
+        ResNet(残差网络)
+        ViT(Vision Transformer)
+      (自然语言处理<br/>NLP)
+        RNN / LSTM
+        Transformer(基石)
+        BERT / GPT(大模型)
+      (图与生成)
+        GNN(图神经网络)
+        Diffusion(扩散模型)
+    [:fa-gamepad: 强化学习<br/>(决策控制)]
+      Q-Learning
+      DQN(深度Q网络)
+      PPO(策略梯度)
+      
 ## 4. 机器学习的标准流程 (Pipeline)
 
 一个完整的机器学习项目通常遵循以下流水线，这也将是我后续博客更新的顺序：
